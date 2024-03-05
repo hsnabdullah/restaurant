@@ -1,8 +1,13 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import special from "@/assets/img/special.jpg";
+import { Arrows } from "@/assets/icon/Icons";
+import { CartProvider, useCart } from "react-use-cart";
 
-export default function Productcard() {
+export default function Productcard({ data }) {
+  const { addItem } = useCart();
+
   return (
     <div>
       <div className=" border border-red-500 relative group">
@@ -11,9 +16,17 @@ export default function Productcard() {
           <h4 className="block group-hover:hidden text-xl leading-5 py-3">
             Malai Boti
           </h4>
-          <button className="hidden group-hover:block text-white bg-transparent border-0 border-orange-600 bg-orange-600 focus:ring-0 focus:outline-none font-medium rounded-lg text-sm px-6 py-3 text-center">
-            Add to Cart
-          </button>
+          <div className="hidden group-hover:block">
+            <button
+              onClick={() => addItem(data)}
+              className="flex justify-between items-center gap-3 text-white border-0 border-orange-600 bg-orange-600 focus:ring-0 focus:outline-none font-medium rounded-lg text-sm px-6 py-3 text-center"
+            >
+              Add to Cart{" "}
+              <span>
+                <Arrows />
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -67,8 +67,9 @@ let data = [
       },
     ],
   },
+
   {
-    title: "Burger",
+    title: "Fried",
     list: [
       {
         title: "malai boti",
@@ -89,7 +90,7 @@ let data = [
     ],
   },
   {
-    title: "Burger",
+    title: "Bar BQ",
     list: [
       {
         title: "malai boti",
@@ -110,7 +111,7 @@ let data = [
     ],
   },
   {
-    title: "Burger",
+    title: "Cold Drinks",
     list: [
       {
         title: "malai boti",
